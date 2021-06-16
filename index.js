@@ -1,6 +1,6 @@
 module.exports = {
     extends: 'standard-with-typescript',
     rules: {
-        "comma-dangle": ["error", "never"],
+        'comma-dangle': ['error', 'always-multiline'],
     }
 }
