@@ -3,6 +3,7 @@ module.exports = {
     rules: {
         // '@typescript-eslint/explicit-function-return-type': 'off', // TODO
         '@typescript-eslint/strict-boolean-expressions': 'off',
+        '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: false }],
         '@typescript-eslint/naming-convention': [ // 💬
             'error',
             {
