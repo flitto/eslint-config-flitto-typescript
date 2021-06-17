@@ -37,9 +37,13 @@ module.exports = {
                 'selector': 'enumMember', // 💬
                 'format': ['UPPER_CASE'], // 💬
             },
+            {
+                'selector': 'variable', // 💬
+                'format': ['camelCase'], // 💬
+            },
         ],
 
         'comma-dangle': ['error', 'always-multiline'],
-        "camelcase": ["error", { "properties": "never", "ignoreDestructuring": true, "ignoreImports": true }],
+        'camelcase': 'off',
     }
 }
