@@ -18,28 +18,21 @@ module.exports = {
                 'format': ['PascalCase'],
             },
             {
-                'selector': 'classProperty',
+                'selector': ['classProperty', 'objectLiteralProperty'],
                 'format': ['snake_case'],
             },
             {
-                'selector': 'objectLiteralProperty',
-                'format': ['snake_case'],
-            },
-            {
-                'selector': 'objectLiteralProperty',
-                'format': ['snake_case'],
-            },
-            {
-                'selector': 'enum',
+                'selector': ['classProperty', 'objectLiteralProperty'],
+                'modifiers': ['readonly', 'static'],
                 'format': ['UPPER_CASE'],
             },
             {
-                'selector': 'enumMember',
+                'selector': ['enum', 'enumMember'],
                 'format': ['UPPER_CASE'],
             },
             {
                 'selector': 'variable',
-                'format': ['camelCase'],
+                'format': ['camelCase', 'UPPER_CASE'],
             },
             {
                 'selector': 'variable',
@@ -53,3 +46,5 @@ module.exports = {
         'no-void': ['error', { 'allowAsStatement': true }]
     }
 }
+
+const abc = 3
