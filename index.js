@@ -2,7 +2,7 @@ module.exports = {
     extends: 'standard-with-typescript',
     rules: {
         // '@typescript-eslint/explicit-function-return-type': 'off', // TODO
-        '@typescript-eslint/strict-boolean-expressions': 'off',
+        // '@typescript-eslint/strict-boolean-expressions': 'off', // TODO
         '@typescript-eslint/naming-convention': [ // 💬
             'error',
             {
