@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-flitto-typescript",
   "version": "0.0.1",
-  "description": "ESlint configuration for flitto projects",
+  "description": "ESlint configuration for Flitto projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,7 @@
     "coding",
     "convention"
   ],
-  "author": "flitto",
+  "author": "Flitto",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/flitto/eslint-config-flitto-typescript/issues"
