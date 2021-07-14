@@ -19,7 +19,7 @@ module.exports = {
             },
             {
                 'selector': ['classProperty', 'objectLiteralProperty'],
-                'format': ['snake_case'],
+                'format': ['snake_case', 'camelCase'],
             },
             {
                 'selector': ['classProperty', 'objectLiteralProperty'],
@@ -46,5 +46,3 @@ module.exports = {
         'no-void': ['error', { 'allowAsStatement': true }]
     }
 }
-
-const abc = 3
