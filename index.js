@@ -8,10 +8,7 @@ module.exports = {
             {
                 'selector': 'interface',
                 'format': ['PascalCase'],
-                'custom': {
-                    'regex': '^I[A-Z]',
-                    'match': true
-                }
+                'prefix': ['I']
             },
             {
                 'selector': 'class',
@@ -20,6 +17,7 @@ module.exports = {
             {
                 'selector': ['classProperty', 'objectLiteralProperty'],
                 'format': ['snake_case', 'camelCase'],
+                'filter': { regex: '(__uuid|)', match: false }
             },
             {
                 'selector': ['classProperty', 'objectLiteralProperty'],
