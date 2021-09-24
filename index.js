@@ -1,9 +1,7 @@
 module.exports = {
     extends: 'standard-with-typescript',
     rules: {
-        // '@typescript-eslint/explicit-function-return-type': 'off', // TODO
-        // '@typescript-eslint/strict-boolean-expressions': 'off', // TODO
-        '@typescript-eslint/naming-convention': [ // 💬
+        '@typescript-eslint/naming-convention': [
             'error',
             {
                 'selector': 'interface',
@@ -41,6 +39,5 @@ module.exports = {
 
         'comma-dangle': ['error', 'always-multiline'],
         'camelcase': 'off',
-        'no-void': ['error', { 'allowAsStatement': true }]
     }
 }
