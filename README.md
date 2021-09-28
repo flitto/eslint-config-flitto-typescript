@@ -6,7 +6,7 @@ Flitto Typescript Style Guide
 ```shell
 npm install --save-dev \
   typescript@^4 \
-  eslint@^7.32.1 \
+  eslint@^7.32.0 \
   eslint-plugin-import@^2.22.1 \
   eslint-plugin-node@^11.1.0 \
   eslint-plugin-promise@^5.0.0 \
