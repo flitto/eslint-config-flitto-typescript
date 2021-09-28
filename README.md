@@ -1,10 +1,5 @@
-<h1 style="text-align: center;">
-    eslint-config-flitto-typescript
-</h1>
-
-<p style="text-align: center;">
-    <a href="https://github.com/flitto/eslint-config-flitto-typescript/blob/master/examples/ts-standard.ts">Flitto Typescript Style Guide</a>
-</p>
+# eslint-config-flitto-typescript
+Flitto Typescript Style Guide
 
 ## Get Started
 ### 1. Installing packages
