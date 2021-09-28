@@ -2,7 +2,7 @@
   "name": "eslint-config-flitto-typescript",
   "version": "0.0.5",
   "description": "ESlint configuration for Flitto projects",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,5 +35,9 @@
     "eslint-plugin-promise": "^4.2.1 || ^5.0.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.28.0",
+    "eslint": "^7.32.0"
   }
 }
