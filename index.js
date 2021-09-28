@@ -1,6 +1,4 @@
-import { Linter } from 'eslint'
-
-const config: Linter.Config = {
+module.exports = {
   extends: 'standard-with-typescript',
   rules: {
     '@typescript-eslint/naming-convention': [
@@ -44,5 +42,3 @@ const config: Linter.Config = {
   },
   reportUnusedDisableDirectives: true,
 }
-
-export = config
