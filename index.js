@@ -22,7 +22,11 @@ module.exports = {
         'format': ['UPPER_CASE'],
       },
       {
-        'selector': ['enum', 'enumMember'],
+        'selector': ['enum'],
+        'format': ['UPPER_CASE', 'PascalCase'],
+      },
+      {
+        'selector': ['enumMember'],
         'format': ['UPPER_CASE'],
       },
       {
