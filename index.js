@@ -15,7 +15,6 @@ module.exports = {
       {
         'selector': ['classProperty', 'objectLiteralProperty'],
         'format': ['snake_case', 'camelCase'],
-        'filter': { regex: '(__uuid|)', match: false },
       },
       {
         'selector': ['classProperty', 'objectLiteralProperty'],
@@ -23,7 +22,11 @@ module.exports = {
         'format': ['UPPER_CASE'],
       },
       {
-        'selector': ['enum', 'enumMember'],
+        'selector': ['enum'],
+        'format': ['UPPER_CASE', 'PascalCase'],
+      },
+      {
+        'selector': ['enumMember'],
         'format': ['UPPER_CASE'],
       },
       {
@@ -44,6 +47,7 @@ module.exports = {
       "error",
       2,
       {
+        "SwitchCase": 1,
         "ignoredNodes": [
           "FunctionExpression > .params[decorators.length > 0]",
           "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
