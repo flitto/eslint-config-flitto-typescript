@@ -10,6 +10,7 @@ Flitto Typescript Style Guide
 npm install --save-dev eslint-config-flitto-typescript@latest
 ```
 **npm@<7**
+
 npm@<7 does not automatically install peerDependencies, so if that's what you're using, install them manually.
 ```shell
 npm install --save-dev \
