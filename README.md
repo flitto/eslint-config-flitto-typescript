@@ -9,36 +9,11 @@ Flitto Typescript Style Guide
 ```
 npm install --save-dev eslint-config-flitto-typescript@latest
 ```
-**npm@<7**
-
-npm@<7 does not automatically install peerDependencies, so if that's what you're using, install them manually.
-```shell
-npm install --save-dev \
-  typescript@^4 \
-  eslint@^7.32.0 \
-  eslint-plugin-import@^2.22.1 \
-  eslint-plugin-node@^11.1.0 \
-  eslint-plugin-promise@^5.0.0 \
-  @typescript-eslint/eslint-plugin@^4.0.1 \
-  eslint-config-flitto-typescript@latest
-``` 
-
-Most of the packages need to be installed as `Peer Dependency`
-of [eslint-config-standard-with-typescript](https://www.npmjs.com/package/eslint-config-standard-with-typescript)
-package.
-
-This list of dependencies is(same
-with [eslint-config-standard-with-typescript](https://www.npmjs.com/package/eslint-config-standard-with-typescript)):
-
-* TypeScript, which you may already have installed
-* ESLint
-* 3 Peer dependencies of eslint-config-standard @typescript-eslint/eslint-plugin; ESLint rules for TypeScript.
-* This package
+(npm@<7 is not supported)
 
 ### 2. Create Eslint configuration file
 
 Create `.eslintrc.json` file at the top of the project directory like below.
-
 ```json
 {
   "parserOptions": {
