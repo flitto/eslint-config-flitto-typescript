@@ -39,7 +39,6 @@ module.exports = {
         'format': null,
       },
     ],
-
     'comma-dangle': ['error', 'always-multiline'],
     'camelcase': 'off',
     "indent": "off",
