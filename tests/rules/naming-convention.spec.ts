@@ -1,6 +1,7 @@
 import { ESLint } from 'eslint'
 import * as Path from 'path'
-const config = require('../../index.js')
+import config from '../../index'
+
 const INVALID = 'invalid'
 const VALID = 'valid'
 
@@ -8,7 +9,7 @@ describe('Flitto Custom Naming Convention Linting Rule Test', () => {
   let lint: ESLint
   beforeAll(() => {
     config.parserOptions = { project: ['tsconfig.json'] }
-    config.rules = { ...config.rules, '@typescript-eslint/no-unused-vars': 'off'} // 테스트시에 no-unused-vars 규칙은 제외합니다.
+    config.rules = { ...config.rules, '@typescript-eslint/no-unused-vars': 'off' } // 테스트시에 no-unused-vars 규칙은 제외합니다.
     lint = new ESLint({ baseConfig: config })
   })
 
