@@ -1,5 +1,9 @@
 module.exports = {
-  extends: 'standard-with-typescript',
+  extends: [
+    'standard-with-typescript',
+    'prettier',
+  ],
+  plugins: ['prettier'],
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',
@@ -39,21 +43,12 @@ module.exports = {
         'format': null,
       },
     ],
-    'comma-dangle': ['error', 'always-multiline'],
-    'camelcase': 'off',
-    "indent": "off",
-    "@typescript-eslint/indent": [
-      "error",
-      2,
-      {
-        "SwitchCase": 1,
-        "ignoredNodes": [
-          "FunctionExpression > .params[decorators.length > 0]",
-          "FunctionExpression > .params > :matches(Decorator, :not(:first-child))",
-          "ClassBody.body > PropertyDefinition[decorators.length > 0] > .key"
-        ]
-      }
-    ]
+    'prettier/prettier': ['error', {
+      'singleQuote': true,
+      'semi': false,
+      'tabWidth': 2,
+      'printWidth': 140
+    }]
   },
   reportUnusedDisableDirectives: true,
 }
