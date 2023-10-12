@@ -9,16 +9,16 @@ module.exports = {
       'error',
       {
         'selector': 'interface',
-        'format': ['PascalCase'],
+        'format': ['StrictPascalCase'],
         'prefix': ['I'],
       },
       {
         'selector': 'class',
-        'format': ['PascalCase'],
+        'format': ['StrictPascalCase'],
       },
       {
         'selector': ['classProperty', 'objectLiteralProperty'],
-        'format': ['snake_case', 'camelCase'],
+        'format': ['snake_case', 'strictCamelCase'],
       },
       {
         'selector': ['classProperty', 'objectLiteralProperty'],
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         'selector': ['enum'],
-        'format': ['UPPER_CASE', 'PascalCase'],
+        'format': ['UPPER_CASE', 'StrictPascalCase'],
       },
       {
         'selector': ['enumMember'],
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         'selector': 'variable',
-        'format': ['camelCase', 'UPPER_CASE'],
+        'format': ['strictCamelCase', 'UPPER_CASE'],
       },
       {
         'selector': 'variable',
