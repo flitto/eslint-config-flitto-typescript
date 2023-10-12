@@ -15,21 +15,10 @@ describe('Flitto Custom Naming Convention Linting Rule Test', () => {
 
   describe('@typescript-eslint/naming-convention', () => {
     const targetDir = 'tests/rules/target/naming-convention'
-    it('인터페이스 이름의 Prefix 로 `I` 가 포함되어있지 않으면 린트에러가 발생합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'interface_prefix_not_started_with_I.ts'))
+    it('인터페이스의 이름은 PascalCase 이어야 합니다.', async () => {
+      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'interface_name_as_camel_case.ts'))
       expect(results[0].messages.length).toEqual(1)
-      expect(results[0].messages[0].message).toEqual('Interface name `NotStartedWithI` must have one of the following prefixes: I')
-    })
-
-    it('인터페이스 이름의 Prefix 로 `I` 가 포함되어있어야 합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, VALID, 'interface_prefix.ts'))
-      expect(results[0].messages.length).toEqual(0)
-    })
-
-    it('클래스의 이름이 PascalCase 가 아니라면 린트에러가 발생합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'class_name_as_camel_case.ts'))
-      expect(results[0].messages.length).toEqual(1)
-      expect(results[0].messages[0].message).toEqual('Class name `camelCaseClass` must match one of the following formats: PascalCase')
+      expect(results[0].messages[0].message).toEqual('Interface name `interfaceCamelCase` must match one of the following formats: PascalCase')
     })
 
     it('클래스의 이름은 PascalCase 이어야 합니다.', async () => {
