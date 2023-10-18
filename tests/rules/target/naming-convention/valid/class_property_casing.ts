@@ -1,6 +1,7 @@
 class PropertyCasingValid {
-  show: number
-  me: string
-  the_money: string
-  forAddon: number
+  property_snake: number
+  propertyCamel: number
+  PropertyPascal: number
+  PROPERTY_UPPER: number
+  'Hyphenated-Property-Casing': number
 }

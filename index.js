@@ -17,13 +17,13 @@ module.exports = {
         'format': ['PascalCase'],
       },
       {
-        'selector': ['classProperty', 'objectLiteralProperty'],
-        'format': ['snake_case', 'camelCase'],
+        'selector': ['property'],
+        'format': ['snake_case', 'camelCase', 'PascalCase', 'UPPER_CASE'],
       },
       {
-        'selector': ['classProperty', 'objectLiteralProperty'],
-        'modifiers': ['readonly', 'static'],
-        'format': ['UPPER_CASE'],
+        'selector': ['property'],
+        'modifiers': ['requiresQuotes'],
+        'format': null,
       },
       {
         'selector': ['enum'],
