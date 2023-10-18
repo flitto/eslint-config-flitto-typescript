@@ -47,7 +47,8 @@ module.exports = {
       'singleQuote': true,
       'semi': false,
       'tabWidth': 2,
-      'printWidth': 140
+      'printWidth': 140,
+      'bracketSameLine': false,
     }]
   },
   reportUnusedDisableDirectives: true,
