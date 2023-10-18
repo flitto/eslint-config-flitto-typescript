@@ -10,7 +10,6 @@ module.exports = {
       {
         'selector': 'interface',
         'format': ['PascalCase'],
-        'prefix': ['I'],
       },
       {
         'selector': 'class',
