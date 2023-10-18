@@ -1,4 +1,4 @@
-interface INotStrictCamelCaseID {
+interface NotStrictCamelCaseID {
   bar: number
   foo: string
 }

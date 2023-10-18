@@ -1,9 +1,9 @@
-interface IStrictCamelCaseId {
+interface StrictCamelCaseId {
   bar: number
   foo: string
 }
 
-interface IStrictCamelCaseDto {
+interface StrictCamelCaseDto {
   bar: number
   foo: string
 }

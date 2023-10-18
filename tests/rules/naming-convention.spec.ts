@@ -15,21 +15,10 @@ describe('Flitto Custom Naming Convention Linting Rule Test', () => {
 
   describe('@typescript-eslint/naming-convention', () => {
     const targetDir = 'tests/rules/target/naming-convention'
-    it('인터페이스 이름의 Prefix 로 `I` 가 포함되어있지 않으면 린트에러가 발생합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'interface_prefix_not_started_with_I.ts'))
-      expect(results[0].messages.length).toEqual(1)
-      expect(results[0].messages[0].message).toEqual('Interface name `NotStartedWithI` must have one of the following prefixes: I')
-    })
-
-    it('인터페이스 이름의 Prefix 로 `I` 가 포함되어있어야 합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, VALID, 'interface_prefix.ts'))
-      expect(results[0].messages.length).toEqual(0)
-    })
-
     it('인터페이스의 이름이 StrictPascalCase(e.g., ID(X)->Id(O) or DTO(X)->Dto(O)) 가 아닌 경우 린트에러가 발생합니다.', async () => {
       const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'interface_name_not_as_strict_camel_case.ts'))
       expect(results[0].messages.length).toEqual(1)
-      expect(results[0].messages[0].message).toEqual('Interface name `INotStrictCamelCaseID` trimmed as `NotStrictCamelCaseID` must match one of the following formats: StrictPascalCase')
+      expect(results[0].messages[0].message).toEqual('Interface name `NotStrictCamelCaseID` must match one of the following formats: StrictPascalCase')
     })
 
     it('인터페이스의 이름은 StrictPascalCase(e.g., ID(X)->Id(O) or DTO(X)->Dto(O)) 이어야 합니다.', async () => {
@@ -59,26 +48,15 @@ describe('Flitto Custom Naming Convention Linting Rule Test', () => {
       expect(results[0].messages.length).toEqual(0)
     })
 
-    it('클래스의 readonly 멤버가 UPPER_CASE 가 아니라면 린트에러가 발생합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'class_property_static_readonly_no_upper_casing.ts'))
-      expect(results[0].messages.length).toEqual(1)
-      expect(results[0].messages[0].message).toEqual('Class Property name `upperCase` must match one of the following formats: UPPER_CASE')
-    })
-
-    it('클래스의 static readonly 멤버는 UPPER_CASE 이어야 합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, VALID, 'class_property_static_readonly_upper_casing.ts'))
-      expect(results[0].messages.length).toEqual(0)
-    })
-
-    it('클래스의 프로퍼티가 PascalCase 인 경우 린트에러가 발생합니다.', async () => {
-      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'class_property_as_pascal_case.ts'))
-      expect(results[0].messages.length).toEqual(1)
-      expect(results[0].messages[0].message).toEqual('Class Property name `PropertyPascal` must match one of the following formats: snake_case, strictCamelCase')
-    })
-
-    it('클래스의 프로퍼티는 camelCase 이거나 snake_case 이어야 합니다.', async () => {
+    it('클래스의 프로퍼티는 camelCase, snake_case, PascalCase 또는 UPPER_CASE 이어야 합니다. (requiresQuotes 인 경우 네이밍 룰 해제)', async () => {
       const results = await lint.lintFiles(Path.join(targetDir, VALID, 'class_property_casing.ts'))
       expect(results[0].messages.length).toEqual(0)
+    })
+
+    it('변수의 이름 앞 뒤로 underscore(`_`) 가 포함된 경우 린트 에러가 발생합니다.', async () => {
+      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'class_property_underscored.ts'))
+      expect(results[0].messages.length).toEqual(6)
+      // expect(results[0].messages[0].message).toEqual('Variable name `PascalCaseVar2` must match one of the following formats: camelCase, UPPER_CASE')
     })
 
     it('object 의 프로퍼티는 camelCase 이거나 snake_case 이어야 합니다.', async () => {

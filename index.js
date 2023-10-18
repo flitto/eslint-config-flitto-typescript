@@ -10,20 +10,19 @@ module.exports = {
       {
         'selector': 'interface',
         'format': ['StrictPascalCase'],
-        'prefix': ['I'],
       },
       {
         'selector': 'class',
         'format': ['StrictPascalCase'],
       },
       {
-        'selector': ['classProperty', 'objectLiteralProperty'],
-        'format': ['snake_case', 'strictCamelCase'],
+        'selector': ['property'],
+        'format': ['snake_case', 'strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
       },
       {
-        'selector': ['classProperty', 'objectLiteralProperty'],
-        'modifiers': ['readonly', 'static'],
-        'format': ['UPPER_CASE'],
+        'selector': ['property'],
+        'modifiers': ['requiresQuotes'],
+        'format': null,
       },
       {
         'selector': ['enum'],
@@ -47,7 +46,8 @@ module.exports = {
       'singleQuote': true,
       'semi': false,
       'tabWidth': 2,
-      'printWidth': 140
+      'printWidth': 140,
+      'bracketSameLine': false,
     }]
   },
   reportUnusedDisableDirectives: true,
