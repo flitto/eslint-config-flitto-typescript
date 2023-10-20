@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-flitto-typescript",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "ESlint configuration for Flitto projects",
   "main": "index.js",
   "scripts": {
@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/flitto/eslint-config-flitto-typescript#readme",
   "dependencies": {
-    "eslint-config-standard-with-typescript": "^39.0.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0"
+    "eslint-plugin-prettier": "^5.0.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
