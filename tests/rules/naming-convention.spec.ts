@@ -114,5 +114,16 @@ describe('Flitto Custom Naming Convention Linting Rule Test', () => {
       expect(results[0].messages.length).toEqual(1)
       expect(results[0].messages[0].message).toEqual('Variable name `usingStrictNamingDTO` must match one of the following formats: strictCamelCase, UPPER_CASE')
     })
+
+    it('클래스의 프로퍼티가 _id 인 경우 예외적으로 허용합니다.', async () => {
+      const results = await lint.lintFiles(Path.join(targetDir, VALID, 'class_property_casing_by_filter.ts'))
+      expect(results[0].messages.length).toEqual(0)
+    })
+
+    it('클래스의 프로퍼티가 예외 케이스를 제외한 기존 린트에러가 정상작동 하는지 테스트 합니다.', async () => {
+      const results = await lint.lintFiles(Path.join(targetDir, INVALID, 'class_property_not_as_filter.ts'))
+      expect(results[0].messages.length).toEqual(2)
+      expect(results[0].messages[0].message).toEqual('Class Property name `_id_` must match one of the following formats: snake_case, strictCamelCase, StrictPascalCase, UPPER_CASE')
+    })
   })
 })

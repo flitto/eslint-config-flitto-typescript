@@ -25,6 +25,14 @@ module.exports = {
         'format': null,
       },
       {
+        'selector': ['property'],
+        'filter': {
+          'regex': '^_id$',
+          'match': true,
+        },
+        'format': null,
+      },
+      {
         'selector': ['enum'],
         'format': ['UPPER_CASE', 'StrictPascalCase'],
       },
