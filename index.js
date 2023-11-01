@@ -27,7 +27,7 @@ module.exports = {
       {
         'selector': ['property'],
         'filter': {
-          'regex': '^_id$',
+          'regex': '^(_id|__v)$',
           'match': true,
         },
         'format': null,
