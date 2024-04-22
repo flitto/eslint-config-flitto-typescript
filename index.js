@@ -1,9 +1,11 @@
 module.exports = {
+  parser: '@typescript-eslint/parser',
   extends: [
-    'standard-with-typescript',
-    'prettier',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
   ],
-  plugins: ['prettier'],
+  plugins: ['@typescript-eslint', 'prettier'],
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',
