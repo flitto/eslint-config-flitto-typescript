@@ -1,7 +1,7 @@
 module.exports = {
   extends: [
-    'standard-with-typescript',
-    'prettier',
+    'love',
+    'prettier'
   ],
   plugins: ['prettier'],
   rules: {
