@@ -6,6 +6,11 @@ export default [
   eslintConfigLove,
   eslintConfigPrettier,
   {
+    languageOptions: {
+      globals: {
+        MyGlobal: true
+      }
+    },
     plugins: {
       prettier: eslintPluginPrettier,
     },
