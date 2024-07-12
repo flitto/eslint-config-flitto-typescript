@@ -15,6 +15,18 @@ module.exports = [
         'printWidth': 140,
         'bracketSameLine': false,
       }],
+      '@typescript-eslint/strict-boolean-expressions': [
+        'error',
+        {
+          allowString: false,
+          allowNumber: false,
+          allowNullableObject: true,
+          allowNullableBoolean: false,
+          allowNullableString: false,
+          allowNullableNumber: false,
+          allowAny: false,
+        },
+      ],
     },
     files: ['**/*.js', '**/*.ts'],
   }
