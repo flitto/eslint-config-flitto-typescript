@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-flitto-typescript",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "ESlint configuration for Flitto projects",
   "main": "index.js",
   "scripts": {
