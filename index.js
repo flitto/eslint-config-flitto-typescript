@@ -1,62 +1,62 @@
 module.exports = {
-  extends: [
-    'love',
-    'prettier'
-  ],
+  extends: ['love', 'prettier'],
   plugins: ['prettier'],
   rules: {
     '@typescript-eslint/naming-convention': [
       'error',
       {
-        'selector': 'interface',
-        'format': ['StrictPascalCase'],
+        selector: 'interface',
+        format: ['StrictPascalCase'],
       },
       {
-        'selector': 'class',
-        'format': ['StrictPascalCase'],
+        selector: 'class',
+        format: ['StrictPascalCase'],
       },
       {
-        'selector': ['property'],
-        'format': ['snake_case', 'strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
+        selector: ['property'],
+        format: ['snake_case', 'strictCamelCase', 'StrictPascalCase', 'UPPER_CASE'],
       },
       {
-        'selector': ['property'],
-        'modifiers': ['requiresQuotes'],
-        'format': null,
+        selector: ['property'],
+        modifiers: ['requiresQuotes'],
+        format: null,
       },
       {
-        'selector': ['property'],
-        'filter': {
-          'regex': '^(_id|__v)$',
-          'match': true,
+        selector: ['property'],
+        filter: {
+          regex: '^(_id|__v)$',
+          match: true,
         },
-        'format': null,
+        format: null,
       },
       {
-        'selector': ['enum'],
-        'format': ['UPPER_CASE', 'StrictPascalCase'],
+        selector: ['enum'],
+        format: ['UPPER_CASE', 'StrictPascalCase'],
       },
       {
-        'selector': ['enumMember'],
-        'format': ['UPPER_CASE'],
+        selector: ['enumMember'],
+        format: ['UPPER_CASE'],
       },
       {
-        'selector': 'variable',
-        'format': ['strictCamelCase', 'UPPER_CASE'],
+        selector: 'variable',
+        format: ['strictCamelCase', 'UPPER_CASE'],
       },
       {
-        'selector': 'variable',
-        'modifiers': ['destructured'],
-        'format': null,
+        selector: 'variable',
+        modifiers: ['destructured'],
+        format: null,
       },
     ],
-    'prettier/prettier': ['error', {
-      'singleQuote': true,
-      'semi': false,
-      'tabWidth': 2,
-      'printWidth': 140,
-      'bracketSameLine': false,
-    }]
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        semi: false,
+        tabWidth: 2,
+        printWidth: 140,
+        bracketSameLine: false,
+      },
+    ],
   },
   reportUnusedDisableDirectives: true,
 }
