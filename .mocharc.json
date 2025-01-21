@@ -1,0 +1,6 @@
+{
+  "spec": "tests/**/*.spec.ts",
+  "node-option": [
+    "import=tsx/esm"
+  ]
+}
